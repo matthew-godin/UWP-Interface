@@ -7,6 +7,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -29,6 +30,9 @@ namespace UWPInterface
         public App()
         {
             this.InitializeComponent();
+            ApplicationView.PreferredLaunchViewSize = new Size { Height = 1136 / 2, Width = 1920 / 2 };
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+            //ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size { Width = 1920, Height = 1136 });
             this.Suspending += OnSuspending;
         }
 
@@ -46,6 +50,7 @@ namespace UWPInterface
             }
 #endif
             Frame rootFrame = Window.Current.Content as Frame;
+
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
