@@ -22,9 +22,8 @@
                     <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
                 <Button Name="LoadGameButton"  Height="60" Width="220" Grid.Column="0" Grid.Row="0" Margin="80,80,0,0" Content="Load Game" FontSize="30" Click="LoadGameButton_Click" />
-                <Button Name="Button2"  Height="60" Width="220" Grid.Column="0" Grid.Row="1" Margin="80,10,0,0" Content="Copy Game" FontSize="30" Click="Button2_Click" />
-                <Button Name="Button3"  Height="60" Width="220" Grid.Column="0" Grid.Row="2" Margin="80,10,0,0" Content="Settings" FontSize="30" Click="Button3_Click" />
-                <Button Name="Button4"  Height="60" Width="220" Grid.Column="0" Grid.Row="3" Margin="80,10,0,0" Content="Credits" FontSize="30" Click="Button4_Click" />
+                <Button Name="Button3"  Height="60" Width="220" Grid.Column="0" Grid.Row="2" Margin="80,10,0,0" Content="Settings" FontSize="30" Click="SettingsButton_Click" />
+                <Button Name="Button4"  Height="60" Width="220" Grid.Column="0" Grid.Row="3" Margin="80,10,0,0" Content="Credits" FontSize="30" Click="CreditsButton_Click" />
             </Grid>
             <Image Source="Assets/Logo.png" Grid.Column="1" Margin="40,40,40,40" />
         </Grid>
