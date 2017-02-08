@@ -9,12 +9,12 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Image Source="Assets/Background.jpg" Stretch="Fill" />
-        <Grid Name="Display" HorizontalAlignment="Center">
+        <Grid Name="Display" HorizontalAlignment="Stretch">
             <Grid.RowDefinitions>
                 <RowDefinition Height="10*" />
                 <RowDefinition Height="90*" />
             </Grid.RowDefinitions>
-            <Button Name="BackButton" Width="300" Height="50" Grid.Column="0" Grid.Row="0" Margin="10,10,10,10" Content="Back" FontSize="30" Click="BackButton_Click" />
+            <Button Name="BackButton" Width="300" Height="50" Grid.Row="0" Margin="10,10,10,10" Content="Back" FontSize="30" Click="BackButton_Click" />
             <Grid Name="Columns" Grid.Row="1" HorizontalAlignment="Stretch">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -25,14 +25,22 @@
                         <RowDefinition Height="10*" />
                         <RowDefinition Height="10*" />
                     </Grid.RowDefinitions>
-                    
+                    <Slider Grid.Row="0" HorizontalAlignment="Center" Name="RenderDistanceSlider" Header="Render Distance" Value="20" Maximum="100" Minimum="5" Width="200" ValueChanged="RenderDistanceSlider_ValueChanged" />
+                    <ComboBox Grid.Row="1" Name="ControllerComboBox" SelectionChanged="ControllerComboBox_SelectionChanged" Width="200" HorizontalAlignment="Center">
+                        <x:String>Keyboard</x:String>
+                        <x:String>Game Controller</x:String>
+                        <x:String>Joystick</x:String>
+                    </ComboBox>
                 </Grid>
                 <Grid Name="Rows2" Grid.Column="1" HorizontalAlignment="Stretch">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="10*" />
                         <RowDefinition Height="10*" />
+                        <RowDefinition Height="10*" />
                     </Grid.RowDefinitions>
-
+                    <ToggleSwitch Grid.Row="0" HorizontalAlignment="Center" Name="AutoSaveToggleSwitch" Header="AutoSave" OnContent="On" OffContent="Off" Toggled="AutoSaveToggleSwitch_Toggled"/>
+                    <Slider Grid.Row="1" HorizontalAlignment="Center" Name="MusicVolumeSlider" Header="Music Volume" Value="30" Maximum="100" Minimum="0" Width="200" ValueChanged="MusicVolumeSlider_ValueChanged" />
+                    <Slider Grid.Row="2" HorizontalAlignment="Center" Name="SoundVolumeSlider" Header="Sound Volume" Value="30" Maximum="100" Minimum="0" Width="200" ValueChanged="SoundVolumeSlider_ValueChanged" />
                 </Grid>
             </Grid>
         </Grid>

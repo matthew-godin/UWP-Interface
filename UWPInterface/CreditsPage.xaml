@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Image Source="Assets/Background.jpg" Stretch="Fill" />
+        <Image Source="Assets/castle.png" Stretch="Fill" />
         <Grid Name="Display">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="25*" />
@@ -23,17 +23,19 @@
                 <RowDefinition Height="10*" />
             </Grid.RowDefinitions>
 
-            <Button Content="Back" Margin="30,30,0,0"  Height="34" Width="100" ClickMode="Press" Background="Gray" Click="Button_Click" Grid.Column="0" Grid.Row="0"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Button Content="Back" Margin="18,21,0,0"  Height="44" Width="134" ClickMode="Press" Background="Transparent" Click="Button_Click" Grid.Column="0" Grid.Row="0"  HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" BorderBrush="White"/>
 
-            <TextBox Text="Raphael Lajoie   " Margin="0" Background="Transparent" Foreground="Gray"  FontSize="20" BorderBrush="Transparent" FontWeight="SemiBold" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right"/>
-            <TextBox Text=" Raphael Brule"  Margin="0" Background="Transparent" Foreground="Gray"  FontSize="20" BorderBrush="Transparent" FontWeight="SemiBold" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center"/>
-            <TextBox Text="Matthew Godin    "  Margin="0" Background="Transparent" Foreground="Gray"  FontSize="20" BorderBrush="Transparent" FontWeight="SemiBold" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center"/>
-            <TextBox Text="   Anthony R.D."   Margin="0" Background="Transparent" Foreground="Gray"  FontSize="20" BorderBrush="Transparent" FontWeight="SemiBold" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Left"/>
+            <TextBox Text="         Raphael Lajoie" Margin="0" Background="Transparent" Foreground="White"  FontSize="20" BorderBrush="Transparent"  Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center"/>
+            <TextBox Text=" Raphael Brule"          Margin="0" Background="Transparent" Foreground="White"  FontSize="20" BorderBrush="Transparent"  Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center"/>
+            <TextBox Text="Matthew Godin    "       Margin="0" Background="Transparent" Foreground="White"  FontSize="20" BorderBrush="Transparent"  Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center"/>
+            <TextBox Text="Anthony R.D.           " Margin="0" Background="Transparent" Foreground="White"  FontSize="20" BorderBrush="Transparent"  Grid.Column="3" Grid.Row="3" HorizontalAlignment="Center"/>
 
 
 
-            <TextBox Text="Credits"           Margin="-140,0,0,0"      Background="Transparent" Foreground="Black" 
-                     FontSize="80" BorderBrush="Transparent" FontWeight="Bold" HorizontalAlignment="Left" Width="auto" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center"/>
+
+
+
+            <TextBox Text="Credits" Margin="-103,0,0,0" Background="Transparent" Foreground="White" FontSize="60" BorderBrush="Transparent" FontWeight="SemiBold" HorizontalAlignment="Left" Width="auto" Grid.Column="2" Grid.Row="0" VerticalAlignment="Center"/>
         </Grid>
     </Grid>
 </Page>

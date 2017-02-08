@@ -169,14 +169,14 @@ namespace UWPInterface
             }
         }
 
-        private void Button2_Click(object sender, RoutedEventArgs e)
-        {
-            Columns.Children.Clear();
-        }
-
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(SettingsPage));
+        }
+
+        private void NewGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(NewGamePage));
         }
 
         private void CreditsButton_Click(object sender, RoutedEventArgs e)

@@ -8,24 +8,31 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Image Source="Assets/Background.jpg" Stretch="Fill" />
-        <Grid Name="Display" HorizontalAlignment="Center">
+        <Image Source="Assets/castle.png" Stretch="Fill"/>
+        <Grid Name="Display">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto" />
-                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="50*" />
             </Grid.ColumnDefinitions>
-            <Grid Name="StartButtons" HorizontalAlignment="Left" Height="568" Width="300" Grid.Column="0">
+            <Grid Name="gauche" Grid.Column="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
-                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="25*" />
+                    <RowDefinition Height="25*" />
+                    <RowDefinition Height="25*" />
+                    <RowDefinition Height="25*" />
                 </Grid.RowDefinitions>
-                <Button Name="LoadGameButton"  Height="60" Width="220" Grid.Column="0" Grid.Row="0" Margin="80,80,0,0" Content="Load Game" FontSize="30" Click="LoadGameButton_Click" />
-                <Button Name="Button3"  Height="60" Width="220" Grid.Column="0" Grid.Row="2" Margin="80,10,0,0" Content="Settings" FontSize="30" Click="SettingsButton_Click" />
-                <Button Name="Button4"  Height="60" Width="220" Grid.Column="0" Grid.Row="3" Margin="80,10,0,0" Content="Credits" FontSize="30" Click="CreditsButton_Click" />
+
+                <Button Name="NewGameButton"  Height="auto" Width="auto" Grid.Column="0" Grid.Row="0" Margin="10,10,10,-55" Content="New Game"  FontSize="30" Click="NewGameButton_Click"        Foreground="White" BorderBrush="White" HorizontalAlignment="Center" VerticalAlignment="Bottom"  />
+                <Button Name="LoadGameButton" Height="auto" Width="auto" Grid.Column="0" Grid.Row="1" Margin="10,77,10,10" Content="Load Game" FontSize="30" Click="LoadGameButton_Click" Foreground="White" BorderBrush="White" HorizontalAlignment="Center" />
+
+                <Button Name="SettingsButton" Height="auto" Width="166" Grid.Column="0" Grid.Row="2" Margin="10,10,10,77" Content="Settings"  FontSize="30" Click="SettingsButton_Click"        Foreground="White" BorderBrush="White" HorizontalAlignment="Center"/>
+                <Button Name="CreditsButton"  Height="auto" Width="166" Grid.Column="0" Grid.Row="3" Margin="10,-55,10,10" Content="Credits"   FontSize="30" Click="CreditsButton_Click"  Foreground="White" BorderBrush="White" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
             </Grid>
-            <Image Source="Assets/Logo.png" Grid.Column="1" Margin="40,40,40,40" />
+
+            <Grid Name="image" Grid.Column="1">
+                <Image Source="Assets/vlogo.png" Margin="42,135,178,119" Width="auto" Height="auto"/>
+            </Grid>
         </Grid>
     </Grid>
 </Page>
