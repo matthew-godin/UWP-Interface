@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -31,6 +32,7 @@ namespace UWPInterface
     public sealed partial class SettingsPage : Page
     {
         const int MUTE = 0, MAX_VOLUME = 100, MIN_RENDER_DISTANCE = 5, MAX_RENDER_DISTANCE = 100;
+        const string PATH = "../../../Saves/save.txt";
 
         int musicVolume, soundVolume, renderDistance;
 
@@ -86,12 +88,20 @@ namespace UWPInterface
             this.InitializeComponent();
         }
 
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        private async void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            //using (StreamWriter writer = new StreamWriter(new FileStream("../../../Saves/save0.txt", FileMode.Append)))
-            //{
-            //    writer.WriteLine("Music Volume: " + MusicVolume);
-            //}
+            //Create the text file to hold the data
+            Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+            Windows.Storage.StorageFile ticketsFile = await storageFolder.CreateFileAsync(PATH, Windows.Storage.CreationCollisionOption.ReplaceExisting);
+
+            //Write data to the file
+            await Windows.Storage.FileIO.WriteTextAsync(ticketsFile, "Swift as a shadow");
+
+            //read file
+            //string savedTickets = await Windows.Storage.FileIO.ReadTextAsync(ticketsFile);
+
+            //viewTickets.Text = savedTickets;
+
             this.Frame.Navigate(typeof(MainPage));
         }
 
